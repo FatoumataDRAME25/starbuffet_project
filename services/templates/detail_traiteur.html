@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Detail_traiteur
+{% endblock  %} 
+
+{% block contenu %}
+    
+    <h1>Bienvenue sur la page detail traiteur</h1>
+    <p>{{traiteur.fullname}}</p>
+    <p>{{traiteur.description}}</p>
+    <p>Tel:{{traiteur.phone}}</p>
+    <p>J'habite à {{traiteur.adress}}</p>
+
+{% endblock  %}

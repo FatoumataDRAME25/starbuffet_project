@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+{% block title %}
+    Traiteur
+{% endblock  %}
+
+{% block contenu %}
+    
+    <h1>Nos Traiteurs</h1>
+    <div class="container">
+
+        <div class="card">
+            {% for traiteur in  traiteurs %}
+                <h2> {{traiteur.fullname}} </h2>
+                <p>Spécialité: {{traiteur.speciality}} </p>
+                <a href = "{% url 'detail_traiteur' traiteur.id %}"> <button> Voir profil </button> </a>
+
+            {% endfor %}
+
+
+        </div>
+    </div>
+{% endblock  %}

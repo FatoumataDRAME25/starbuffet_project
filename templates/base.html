@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href = "{% static 'css/style_global.css' %}">
+    <title> {% block title %}{% endblock  %}</title>
+</head>
+<body>
+    <header>
+
+        <div class="menu">
+            <div class="logo">
+            
+                 <img src="{% static 'images/logo(2).png' %}" alt="L'image du logo">
+                
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <a href = "{% url 'traiteur' %}"> Traiteurs </a>
+                    <a href = "{% url 'ajout_traiteur' %}">Ajouter un Traiteur</a>
+                </ul>
+            </nav>
+            <div>
+                {% if user.is_authenticated %}
+                    <h1> Bonjour {{user.username|upper}}</h1>
+                    <form method = 'POST' action = "{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type = 'submit'>Deconnexion</button>
+                    </form>
+                {% else %}
+                    <a href = "{% url 'login' %}" >Connexion</a>
+                    <a href = "{% url 'signup' %}">Inscription</a>
+
+                {% endif %}
+            </div>
+              
+        </div>
+    </header>
+
+    {% block contenu %}
+    
+    {% endblock  %}
+    <footer class="informations">
+        <div class="bloc">
+            <div class="bloc1">
+                <strong>A propos</strong>
+                <span>Qui sommes-nous</span>
+                <span>Contact</span>
+                <span>Mentions legales</span>
+                <span>Politique de confidetialite</span>
+            </div>
+            <div class="bloc1">
+                <strong>Services</strong>
+                <span>Traiteurs</span>
+                <span>Restaurants</span>
+                <span>Cours de Cuisine</span>
+            </div>
+            <div class="bloc1">
+                <strong>Espace Pro</strong>
+                <span>Devenir partenaire</span>
+                <span>Connexion</span>
+                <span>FAQ Professionnels</span>
+            </div>
+            <div class="bloc1">
+                <strong>Contact</strong>
+                <span>Star Buffet</span>
+                <span>Dakar, Senegal</span>
+                <span>Tel: +221770000000</span>
+                <span>Email: contact@starbuff.com</span>
+                <span id="monSpan"><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-square-instagram"></i></span>
+            </div>
+        </div>    
+        <div class="bloc2">
+               <p>&copy; 2025 Star Buffet. Tous droits reserves</p>
+        </div>
+        
+    </footer>
+</body>
+</html> 

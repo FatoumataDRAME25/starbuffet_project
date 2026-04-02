@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Connexion
+{% endblock  %}
+
+{% block contenu %}
+    <h2> Page de connexion</h2>
+
+    <form method = 'POST'>
+        {% csrf_token%}
+        {{form.as_p}}
+        
+        <button type = 'submit'> Se connecter</button>
+        
+    </form>
+{% endblock  %}
