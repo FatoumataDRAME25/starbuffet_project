@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c0a30635fd.js" crossorigin="anonymous"></script>
     <link rel ="stylesheet" href = "{% static 'css/style_global.css' %}">
     <title> {% block title %}{% endblock  %}</title>
 </head>
@@ -30,9 +31,16 @@
                         <button type = 'submit'>Deconnexion</button>
                     </form>
                 {% else %}
-                    <a href = "{% url 'login' %}" >Connexion</a>
-                    <a href = "{% url 'signup' %}">Inscription</a>
-
+                    <div class="header-btn">
+                        <form method = 'POST' action = "{% url 'login' %}">
+                            {% csrf_token %}
+                            <button type = 'submit' class = "btn btn1">Connexion</button>
+                        </form>
+                        <form method = 'POST' action = "{% url 'signup' %}">
+                            {% csrf_token %}
+                            <button type = 'submit' class = "btn btn2">Inscription</button>
+                        </form>
+                    </div>
                 {% endif %}
             </div>
               
@@ -42,6 +50,7 @@
     {% block contenu %}
     
     {% endblock  %}
+
     <footer class="informations">
         <div class="bloc">
             <div class="bloc1">

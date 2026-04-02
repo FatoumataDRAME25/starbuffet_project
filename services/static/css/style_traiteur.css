@@ -9,16 +9,193 @@
     font-family: "Roboto", sans-serif;
     font-style: normal;
 }
-body{
-    background-color:brown;
+
+
+.decouverte{
+    background-image: linear-gradient(rgba(202, 89, 2, 0.067), rgba(129, 59, 5, 0.292)),url("../images/banner-caterers.jpg");
+    background-size: cover;
+    z-index: 2;
+    height: 600px;
+    background-position: center;
+    overflow: hidden;
+    mix-blend-mode: multiply;
+}
+
+.decouverte .deco{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    margin-left: 550px;
+    margin-top: 150px;
+}
+.decouverte .deco h1{
+    font-size: 60px;
+    margin-bottom: 15px;
+    margin-top: -20px;
+}
+.decouverte .deco p{
+    font-size: 20px;
+}
+
+.profil{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     padding:  30px 10%; 
+    /* background-color: red; */
+    width: 100%;
+}
+strong{
+    font-size: 30px;
+}
+.profil .meta{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+#specialites{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+#status{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+.profil .meta span{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.btn3, .btn4{
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn3{
+    background-color: #e65100d4;
+    border: none;
+    color:white;
+}
+.btn3,.btn4 i{
+    margin-right: 5px;
+    
+}
+.btn3 i{
+     color:white;
+}
+
+.profilleft{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    width: 50%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+   
+}
+
+.container .card{
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    width: 70%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
 }
 
 
+.card .card_gauche{
+   
+    padding: 40px 0;
+    gap: 20px;
+   
+}
 
+.card_gauche h2{
+    
+    margin-bottom: 15px;
 
+}
+.card .card_droite{
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+.card .card_droite i{
+    margin-bottom: 100px;
+    
+    color: #ffb300ba;
+}
+.card .card_droite i span{
+    margin-left: 5px;
+    color: black;
+}
 
+.btn_specialite{
+     padding: 2px 10px;
+     border: none;
+     border-radius: 10px;
+     background-color: #9999992b;
+}
+.btn_profil{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.819);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    cursor: pointer;
+}
 
-.logo img{
-  max-width: 150px;
-  height: auto;
+.commande{
+    padding: 100px 100px;
+    background-image: linear-gradient(rgba(202, 89, 2, 0.306), rgba(129, 59, 5, 0.577)),url("../images/banner-accueil\(1\).jpg");
+    mix-blend-mode: multiply;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    
+}
+.commande .pret{
+    /*margin-left: 600px; */
+    text-align: center;
+   
+}
+.commande h1{
+    margin-bottom: 20px;
+    font-size: 60px;
+    padding: 10px 10px;
+    color: white;
+}
+.commande p{
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: white;
+}
+.commande button{
+    font-size: 30px;
+    padding: 15px 20px;
+    background: white;
+    border: white;
+    border-radius: 10px;
+    color:#e05910;
+    cursor: pointer;
 }

@@ -9,9 +9,53 @@
     font-style: normal;
 }
 body{
-    background-color: red;
+    background-color: #fff3e0;
 }
 
+header{
+    padding: 20px 8%;
+    z-index: 20;
+    margin-bottom: 0;
+    margin-top: 0;
+    background-color: white;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.header-nav ul{
+    display: flex;
+    gap: 60px;
+
+}
+.header-nav ul a{
+    color: black;
+    font-size: 25px;
+
+}
+.header-nav ul a:hover{
+    color: #ffb300;
+    border-bottom: 3px solid #ffb300;
+}  
+.header-btn{
+    display: flex;
+    gap: 20;
+}
+.btn{
+   padding: 10px 20px;
+   font-size: 25px;
+   border: none;
+   cursor: pointer;
+   background: none;     
+}
+.btn2{
+    background-color: #e65100;
+    border-radius: 10px;
+    color: black;
+}
 
 
 
@@ -19,4 +63,59 @@ body{
 .logo img{
   max-width: 150px;
   height: auto;
+}
+
+
+/*mise en page du footer*/
+
+footer.informations{
+    background-color: rgb(4, 4, 39);
+    margin: 0 0;
+    
+    
+}
+.bloc{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+     padding: 50px 60px; 
+     border-bottom: 0.5px solid rgba(255, 255, 255, 0.154);
+    
+}
+.bloc .bloc1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start; 
+    color: white;
+    
+    
+}
+.bloc .bloc1 span{
+    text-align: right;
+    color: white;
+    margin-top: 3px;
+    font-size: 20px;
+
+}    
+.bloc .bloc1 strong{
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.bloc2{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 20px;
+    
+}
+.bloc1 #monSpan{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
